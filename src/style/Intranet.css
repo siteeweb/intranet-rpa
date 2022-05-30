@@ -1,0 +1,78 @@
+.login{
+  background-color: #D1D5DD;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.center{
+  display: flex;
+  justify-content: center;
+}
+.login-form{
+  background-color: rgb(255, 255, 255);
+  padding: 30px 20px 30px 20px;
+  width: 320px;
+}
+.login-form-title{
+  font-size: 24px;
+  color: rgb(71, 71, 71);
+  font-weight: 400;
+  text-align: center;
+}
+
+.navbar{
+  background-color: rgb(245, 245, 245);
+}
+.navbar .title-navbar{
+  text-align: center;
+  color: rgba(0,44,97,1);
+  font-weight: 400;
+}
+.title-page{
+  padding-top: 10px;
+  background-color: rgba(0,44,97,1);
+  color: #fff;
+  font-size: 20px;
+}
+
+.sidebar{
+  background-color: #4271b3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.btn-rpa{
+  background: linear-gradient(#cfe3ff, #789fd6);
+  margin-top: 12px;
+  min-width: 300px;
+}
+.btn-rpa:hover{
+  background: linear-gradient(#b7c9e3, #6588b9);
+}
+
+.btnpyn{
+  display: flex;
+  flex-direction: column;
+}
+
+.txtNovedades{
+  background-color: #4271b3;
+  color: #fff;
+  margin: 50px 0px 50px 0px;
+  padding: 20px;
+}
+.a-nov{
+  color: rgb(45, 45, 45);
+  text-decoration: none;
+}
+.a-nov:hover{
+  color: rgb(0, 0, 0);
+}
+
+@media (max-width: 420px) { 
+  .navbar .title-navbar{
+    font-size: 20px;
+  }
+  .logo{
+    text-align: center;
+  }
+}
