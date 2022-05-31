@@ -10,31 +10,31 @@ function PoliticasyNormas () {
 
         <div className="container mt-5 btnpyn">
           <ButtonPdf
-            url="/pdf"
+            url="/pdf-vacaciones"
             content="Enlace: HR001-01 Vacaciones"
           />
           <ButtonPdf
-            url="#"
+            url="/pdf-permisos-y-licencias"
             content="Enlace: POE - HR004-01 Permisos y Licencias"
           />
           <ButtonPdf
-            url="#"
+            url="/pdf-descanso-medico"
             content="Enlace: POE - HR008-01 Descansos Médicos"
           />
           <ButtonPdf
-            url="/nosotros"
+            url="/pdf-subsidio-por-enfermedad"
             content="Enlace: POE - HR 006-01 Subsidios por Enfermedad"
           />
           <ButtonPdf
-            url="#"
+            url="/pdf-licencia-por-paternidad"
             content="Enlace: POE - HR009-01 Licencia por Paternidad"
           />
           <ButtonPdf
-            url="#"
+            url="/pdf-subsidio-por-maternidad"
             content="Enlace: POE - HR007-01 Subsidio por Maternidad"
           />
           <ButtonPdf
-            url="#"
+            url="/pdf-cese-de-personal"
             content="Enlace: HR005-01 Cese de Personal"
           />
         </div>
