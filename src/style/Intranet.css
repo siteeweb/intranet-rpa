@@ -80,11 +80,35 @@
 .alert-visible{
   visibility: visible!important;
 }
+@media (min-width: 992px) {
+  .navbar>.logo{
+    z-index: 2;
+  }
+  .navbar>.col-lg-10{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  .navbar.row{
+    padding: 1rem 2rem;
+  }
+  .title-page{
+    padding: 10px 2rem 0px 2rem;
+  }
+}
+@media (max-width: 890px) {
+  .logo{
+    text-align: center;
+  }
+}
 @media (max-width: 420px) { 
   .navbar .title-navbar{
     font-size: 20px;
   }
   .logo{
-    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .logo img{
+    max-width: 40vw;
   }
 }

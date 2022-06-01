@@ -77,10 +77,6 @@ function Payroll () {
                         <InputGroup.Text id="anho">Año: </InputGroup.Text>
                         <Form.Select onChange={onChangeYear} aria-label="year" aria-describedby="anho">
                             <option></option>
-                            <option value="2018">2018</option>
-                            <option value="2019">2019</option>
-                            <option value="2020">2020</option>
-                            <option value="2021">2021</option>
                             <option value="2022">2022</option>
                         </Form.Select>
                     </InputGroup>
@@ -107,8 +103,6 @@ function Payroll () {
                         <InputGroup.Text id="periodo">Periodo: </InputGroup.Text>
                         <Form.Select onChange={onChangePeriod} aria-label="periodo" aria-describedby="periodo">
                             <option></option>
-                            <option value="20182019">2018 - 2019</option>
-                            <option value="20192020">2019 - 2020</option>
                             <option value="20202021">2020 - 2021</option>
                             <option value="20212022">2021 - 2022</option>
                         </Form.Select>
