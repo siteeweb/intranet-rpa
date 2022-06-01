@@ -1,3 +1,11 @@
+.txt-justify{
+  font-size: 18px;
+  text-align: justify;
+}
+.txt-center{
+  font-size: 18px;
+  text-align: center;
+}
 .login{
   background-color: #D1D5DD;
   padding-top: 100px;
@@ -21,6 +29,8 @@
 
 .navbar{
   background-color: rgb(245, 245, 245);
+  padding-left: 50px;
+  padding-right: 50px;
 }
 .navbar .title-navbar{
   text-align: center;
@@ -29,9 +39,27 @@
 }
 .title-page{
   padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
   background-color: rgba(0,44,97,1);
   color: #fff;
-  font-size: 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sub-title{
+  color: rgba(0,44,97,1);
+  font-size: 35px;
+  font-family:'Overpass',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;  
+}
+.title{
+  color: rgba(0,44,97,1);
+  font-size: 45px;
+  font-family:'Overpass',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 900;
+  text-transform: capitalize;
 }
 
 .sidebar{
@@ -54,6 +82,10 @@
   flex-direction: column;
 }
 
+.img-border{
+  border-radius: 20px;
+}
+
 .txtNovedades{
   background-color: #4271b3;
   color: #fff;
@@ -70,7 +102,7 @@
 
 @media (max-width: 420px) { 
   .navbar .title-navbar{
-    font-size: 20px;
+    display: none;
   }
   .logo{
     text-align: center;

@@ -4,6 +4,7 @@ import { Card } from 'react-bootstrap';
 import Navbar from '../components/navbar';
 import galeria from '../img/galeria.jpg';
 import { Link } from 'react-router-dom';
+import Title from '../components/title';
 
 function Inicio () {
   return (
@@ -60,7 +61,7 @@ function Inicio () {
                     </div> 
 
                     <div className="row mt-3">
-                    <h3 className="text-center">Galeria de fotos</h3>
+                    <Title title="Galeria de fotos"/>
                     <img src={galeria} className="img-fluid" alt="galeria" />
                     </div> 
 

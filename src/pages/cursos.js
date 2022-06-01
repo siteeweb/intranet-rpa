@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/navbar';
 import { Table } from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import Title from '../components/title';
 
 function Cursos () {
   return (
@@ -10,7 +11,7 @@ function Cursos () {
         <Navbar title="Gestion de talento"/>
 
         <div className="container mt-5">
-        <h1 className="display-6">Cursos UDEMY</h1>
+        <Title title="cursos udemy"/>
             <Table striped bordered hover>
                 <thead>
                     <tr>

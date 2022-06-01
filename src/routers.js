@@ -1,6 +1,7 @@
 import React from "react";
 import './style/Intranet.css';
 import Login from './pages/login';
+import Crud from "./pages/crud/dashboard";
 import Inicio from './pages/inicio';
 import Nosotros from './pages/nosotros';
 import GestiondeTalento from './pages/gestiondeltalento';
@@ -20,6 +21,11 @@ import PdfSubsidiosxMaternidad from "./pages/pdf/hr007-01";
 import PdfDescansoMedico from "./pages/pdf/hr008-01";
 import PdfLicenciaxPaternidad from "./pages/pdf/hr009-01";
 
+import NuevoPersonal from "./pages/crud/form-nuevo-personal";
+import NuevaCapacitacion from "./pages/crud/form-nueva-capacitacion";
+import NuevoCurso from "./pages/crud/form-nuevo-curso";
+import RegistroBoletas from "./pages/crud/form-reg-blt";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -33,6 +39,7 @@ function Routers() {
         <Routes>
           <Route path="/" element={<Login/>}/>
           <Route path="/inicio" element={<Inicio/>}/>
+          <Route path="/dashboard" element={<Crud/>}/>
           <Route path="/nosotros" element={<Nosotros/>}/>
           <Route path="/gestion-de-talento" element={<GestiondeTalento/>}/>
           <Route path="/politicas-y-normas" element={<PoliticasyNormas/>}/>
@@ -50,6 +57,11 @@ function Routers() {
           <Route path="/pdf-licencia-por-paternidad" element={<PdfLicenciaxPaternidad/>}/>
           <Route path="/pdf-subsidio-por-maternidad" element={<PdfSubsidiosxMaternidad/>}/>
           <Route path="/pdf-cese-de-personal" element={<PdfCesePersonal/>}/>
+
+          <Route path="/nuevo-personal" element={<NuevoPersonal/>}/>
+          <Route path="/nueva-capacitacion" element={<NuevaCapacitacion/>}/>
+          <Route path="/nuevo-curso" element={<NuevoCurso/>}/>
+          <Route path="/registro-boletas" element={<RegistroBoletas/>}/>
         </Routes>
       </div>
     </Router>

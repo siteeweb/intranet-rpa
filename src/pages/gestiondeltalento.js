@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/navbar';
 import { Table } from 'react-bootstrap';
 import ButtonRpa from '../components/buttonRpa';
+import Title from '../components/title';
 
 function GestiondeTalento () {
   return (
@@ -10,7 +11,7 @@ function GestiondeTalento () {
         <Navbar title="Gestion de Talento"/>
 
         <div className="container mt-5">
-            <h1 className="display-6">Directorio</h1>
+            <Title title="Directorio"/>
             <Table striped bordered hover responsive>
                 <thead>
                     <tr>

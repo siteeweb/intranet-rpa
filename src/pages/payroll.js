@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/navbar';
 import { Table, Form, Button, InputGroup } from 'react-bootstrap';
+import Title from '../components/title';
 
 function Payroll () {
   return (
@@ -9,11 +10,11 @@ function Payroll () {
         <Navbar title="Gestion de Talento"/>
 
         <div className="container mt-5">
-            <h1 className="display-6">Payroll</h1>
+            <Title title="Payroll"/>
 
             <div className="row mb-3">
                 <p>Boletas</p>
-                <div className="col-4">
+                <div className="col-lg-4 col-md-6 mb-3">
                     <InputGroup>
                         <InputGroup.Text id="mes">Mes: </InputGroup.Text>                    
                         <Form.Select aria-label="month" aria-describedby="mes">
@@ -34,7 +35,7 @@ function Payroll () {
                     </InputGroup>
                 </div>
 
-                <div className="col-4">
+                <div className="col-lg-4 col-md-6 mb-3">
                     <InputGroup>
                         <InputGroup.Text id="anho">Año: </InputGroup.Text>
                         <Form.Select aria-label="year" aria-describedby="anho">
@@ -48,21 +49,21 @@ function Payroll () {
                     </InputGroup>
                 </div>
         
-                <div className="col-4">
+                <div className="col-lg-4 col-md-12 mb-3">
                     <Button variant="success" className="form-control">Visualizar</Button>
                 </div>
             </div>
 
             <div className="row mb-3">
                 <p>Record de vacaciones</p>
-                <div className="col-6">
+                <div className="col-lg-6 col-md-6 mb-3">
                     <InputGroup>
                         <InputGroup.Text id="saldo-vacaciones">Saldo de vacaciones: </InputGroup.Text>                    
                         <Form.Control type="text" placeholder="" />
                     </InputGroup>
                 </div>
 
-                <div className="col-6">
+                <div className="col-lg-6 col-md-6 mb-3">
                     <InputGroup>
                         <InputGroup.Text id="periodo">Periodo: </InputGroup.Text>
                         <Form.Select aria-label="periodo" aria-describedby="periodo">

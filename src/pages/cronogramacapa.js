@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/navbar';
 import { Table } from 'react-bootstrap';
+import Title from '../components/title';
 
 function CronogramaCapa () {
   return (
@@ -9,7 +10,7 @@ function CronogramaCapa () {
         <Navbar title="Gestion de Talento"/>
 
         <div className="container mt-5">
-            <h1 className="display-6">Cronograma de Capacitaciones</h1>
+            <Title title="Cronograma de Capacitaciones"/>
             <Table striped bordered hover responsive>
                 <thead>
                     <tr>
