@@ -127,6 +127,14 @@
   .title-page{
     padding: 10px 2rem 0px 2rem;
   }
+  .form-alerts{
+    display: flex;
+    flex-direction: column;
+  }
+  .form-alerts>div{
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media (max-width: 890px) {
   .logo{

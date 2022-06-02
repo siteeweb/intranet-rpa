@@ -1,15 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../../components/navbar';
-import { Form, Button, Col, Row, InputGroup, FormControl } from 'react-bootstrap';
+import { Form, Button, Col, Row, InputGroup, FormControl, Alert } from 'react-bootstrap';
+import axios from "axios";
 
 function RegistroBoletas () {
+  const [month, setMonth] = useState("");
+  const [year, setYear] = useState("");
+  const [fileUpload, setFileUpload] = useState(null);
+  const [show, setShow] = useState(false);
+  const [showError, setShowError] = useState(false);
+
+  const onChangeMonth = (e) => {
+    setMonth(e.target.value);
+  };
+
+  const onChangeYear = (e) => {
+    setYear(e.target.value);
+  };
+
+  const onFileUpload = (e) => {
+    setFileUpload(e.target.files[0]);
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const data = new FormData();
+    data.append("file", fileUpload);
+    data.append("folder", "boletas");
+    data.append("fileName", month+"_"+year+".pdf");
+    var config = {
+      method: "post",
+      url: "https://qigo043dp3.execute-api.us-east-1.amazonaws.com/apirpa/putObject",
+      headers: {
+        "content-type": "multipart/form-data",
+      },
+      data: data,
+    };
+    axios(config)
+      .then((response) => {
+        setShow(true);
+        setTimeout(function(){
+          setShow(false);
+          window.location.reload();
+        }, 2500);
+      })
+      .catch((e) => {
+        console.log(e);
+        setShowError(true);
+        setTimeout(function(){
+          setShowError(false);
+        }, 2000);
+      });
+  }  
+
   return (
 
     <div>
         <Navbar title="Registro de boletas "/>
 
         <div className="container mt-5">
-            <Form>
+            <Form className="mb-3">
                 <Form.Group as={Row}>
                     <Col sm="6" className="mb-3">
                         <InputGroup>
@@ -26,7 +76,7 @@ function RegistroBoletas () {
                     <Col sm="4" className="mb-3">
                     <InputGroup>
                         <InputGroup.Text id="mes">Mes: </InputGroup.Text>                    
-                            <Form.Select aria-label="month" aria-describedby="mes">
+                            <Form.Select onChange={onChangeMonth} aria-label="month" aria-describedby="mes">
                                 <option></option>
                                 <option value="Ene">Enero</option>
                                 <option value="Feb">Febrero</option>
@@ -46,18 +96,15 @@ function RegistroBoletas () {
                     <Col sm="4" className="mb-3">
                         <InputGroup>
                             <InputGroup.Text id="anho">Año: </InputGroup.Text>
-                            <Form.Select aria-label="year" aria-describedby="anho">
+                            <Form.Select onChange={onChangeYear} aria-label="year" aria-describedby="anho">
                                 <option></option>
-                                <option value="2018">2018</option>
-                                <option value="2019">2019</option>
-                                <option value="2020">2020</option>
-                                <option value="2021">2021</option>
                                 <option value="2022">2022</option>
                             </Form.Select>
                         </InputGroup>
                     </Col>
                     <Col sm="4" className="mb-3">
-                        <FormControl
+                        <FormControl 
+                            onChange={onFileUpload}
                             aria-label="boleta"
                             aria-describedby="boleta"
                             type="file"
@@ -65,10 +112,17 @@ function RegistroBoletas () {
                     </Col>
                 </Form.Group>
 
-                <Button variant="success" className="form-control">Registrar</Button>
+                <Button onClick={onSubmit} variant="success" className="form-control" disabled={!month || !year}>Registrar</Button>
 
             </Form>
-
+            <div className='form-alerts'>
+              <Alert show={show} variant="success" onClose={() => setShow(false)} dismissible>
+                Se cargo correctamente la boleta.
+              </Alert>
+              <Alert show={showError} variant="danger" onClose={() => setShowError(false)} dismissible>
+                Ocurrio un problema al cargar la boleta.
+              </Alert>
+            </div>
         </div>
 
     </div>
