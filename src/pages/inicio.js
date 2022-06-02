@@ -2,9 +2,11 @@ import React from 'react';
 import ButtonRpa from '../components/buttonRpa';
 import { Card } from 'react-bootstrap';
 import Navbar from '../components/navbar';
-import galeria from '../img/galeria.jpg';
+import diamadre4 from '../img/diamadre4.jpg';
+import backtooffice4 from '../img/backtooffice4.jpg';
+import diamadre1 from '../img/diamadre1.jpg';
 import { Link } from 'react-router-dom';
-import Title from '../components/title';
+import SubTitle from '../components/subtitle';
 
 function Inicio () {
   return (
@@ -60,11 +62,22 @@ function Inicio () {
                         </div>
                     </div> 
 
-                    <div className="row mt-3">
-                    <Title title="Galeria de fotos"/>
-                    <img src={galeria} className="img-fluid" alt="galeria" />
-                    </div> 
-
+                    <div className="container">
+                        <div className="row text-center mt-5">
+                            <SubTitle content="Galeria de fotos"/>
+                        </div>
+                        <div className="row mb-5">
+                            <div className="col-lg-4 col-md-12 mb-3">
+                                <img src={diamadre4} className="img-fluid img-border" alt="diamadre4" />
+                            </div>
+                            <div className="col-lg-4 col-md-12 mb-3">
+                                <img src={backtooffice4} className="img-fluid img-border" alt="backtooffice4" />
+                            </div>
+                            <div className="col-lg-4 col-md-12 mb-3">
+                                <img src={diamadre1} className="img-fluid img-border" alt="diamadre1" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/navbar';
 import SubTitle from '../components/subtitle';
 import Title from '../components/title';
-import nosotros from '../img/nosotros.jpeg'
+import nosotros from '../img/nosotros.jpg'
 import logoLogin from '../img/logo-login-rpa.png';
 import valores1 from '../img/nuestrosvalores1.jpg';
 import valores2 from '../img/nuestrosvalores2.jpg';
@@ -11,7 +11,11 @@ function Nosotros () {
   return (
 
     <div>
-        <Navbar title="Acerca de Nosotros"/>
+        <Navbar
+            linkprev="/inicio" 
+            prev="inicio / "
+            title="Acerca de Nosotros"
+        />
         <div className="container mt-5 mb-5">
             <div className="row mb-5">
               <div className="col-lg-7 col-md-12 d-flex align-items-center">

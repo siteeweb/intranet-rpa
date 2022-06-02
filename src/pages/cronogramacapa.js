@@ -1,16 +1,20 @@
 import React from 'react';
 import Navbar from '../components/navbar';
 import { Table } from 'react-bootstrap';
-import Title from '../components/title';
+import SubTitle from '../components/subtitle';
 
 function CronogramaCapa () {
   return (
 
     <div>
-        <Navbar title="Gestion de Talento"/>
+        <Navbar
+            linkprev="/gestion-de-talento" 
+            prev="gestion de talento / "
+            title="capacitaciones"
+        />
 
         <div className="container mt-5">
-            <Title title="Cronograma de Capacitaciones"/>
+            <SubTitle content="Cronograma de Capacitaciones"/>
             <Table striped bordered hover responsive>
                 <thead>
                     <tr>

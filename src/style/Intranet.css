@@ -47,15 +47,20 @@
   text-transform: uppercase;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.title-page a{
+  color: #fff;
+  text-decoration: none;
+}
+.title-page a:hover{
+  color: rgb(199, 199, 199);
+}
 
 .sub-title{
-  color: rgba(0,44,97,1);
   font-size: 35px;
   font-family:'Overpass',Helvetica,Arial,Lucida,sans-serif;
   font-weight: 700;  
 }
 .title{
-  color: rgba(0,44,97,1);
   font-size: 45px;
   font-family:'Overpass',Helvetica,Arial,Lucida,sans-serif;
   font-weight: 900;
@@ -106,5 +111,14 @@
   }
   .logo{
     text-align: center;
+  }
+  .sub-title{
+    font-size: 25px;  
+  }
+  .title{
+    font-size: 35px;
+    font-family:'Overpass',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 900;
+    text-transform: capitalize;
   }
 }

@@ -15,12 +15,12 @@ const Navbar = (props) => {
         </div>
 
         <div className="col-lg-10 col-md-12">
-          <h1 className="display-4 title-navbar">Portal RPA Latam</h1>
+          <h1 className="display-4 title-navbar">{/* The heading text is large */}</h1>
         </div>
       </div>
 
       <div className="row title-page">
-        <p>{props.title}</p>
+        <p><a href={props.linkprev}>{props.prev}</a>{props.title}</p>
       </div>
 
     </div>

@@ -2,16 +2,20 @@ import React from 'react';
 import Navbar from '../components/navbar';
 import { Table } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import Title from '../components/title';
+import SubTitle from '../components/subtitle';
 
 function Cursos () {
   return (
 
     <div>
-        <Navbar title="Gestion de talento"/>
+        <Navbar
+            linkprev="/gestion-de-talento" 
+            prev="gestion de talento / "
+            title="cursos"
+        />
 
         <div className="container mt-5">
-        <Title title="cursos udemy"/>
+        <SubTitle content="Cursos UDEMY"/>
             <Table striped bordered hover>
                 <thead>
                     <tr>

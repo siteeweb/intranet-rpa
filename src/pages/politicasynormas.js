@@ -1,14 +1,20 @@
 import React from 'react';
 import Navbar from '../components/navbar';
 import ButtonPdf from '../components/buttonPdf';
+import SubTitle from '../components/subtitle';
 
 function PoliticasyNormas () {
   return (
 
     <div>
-        <Navbar title="Politicas y Normas"/>
+        <Navbar
+            linkprev="/inicio" 
+            prev="inicio / "
+            title="Politicas y Normas"
+        />
 
         <div className="container mt-5 btnpyn">
+          <SubTitle content="Politicas y Normas"/>
           <ButtonPdf
             url="/pdf-vacaciones"
             content="Enlace: HR001-01 Vacaciones"

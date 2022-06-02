@@ -1,16 +1,20 @@
 import React from 'react';
 import Navbar from '../components/navbar';
 import { Table, Form, Button, InputGroup } from 'react-bootstrap';
-import Title from '../components/title';
+import SubTitle from '../components/subtitle';
 
 function Payroll () {
   return (
 
     <div>
-        <Navbar title="Gestion de Talento"/>
+        <Navbar
+            linkprev="/gestion-de-talento" 
+            prev="gestion de talento / "
+            title="payroll"
+        />
 
         <div className="container mt-5">
-            <Title title="Payroll"/>
+            <SubTitle content="Payroll"/>
 
             <div className="row mb-3">
                 <p>Boletas</p>
