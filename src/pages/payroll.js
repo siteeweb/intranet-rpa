@@ -7,7 +7,7 @@ import ObjectDataService from "../services/object.service";
 function Payroll () {
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
-  const [period, setPeriod] = useState("");
+ //const [period, setPeriod] = useState("");
   const [urlSigned, setUrlSigned] = useState("");
   const [fileGetted, setFileGetted] = useState("");
 
@@ -20,7 +20,7 @@ function Payroll () {
   };
 
   const onChangePeriod = (e) => {
-    setPeriod(e.target.value);
+    //setPeriod(e.target.value);
   };
 
   const getFile = (ev) => {
@@ -35,7 +35,7 @@ function Payroll () {
           setUrlSigned("");
         }
         setFileGetted(true);
-        console.log("me",urlSigned,urlSigned=="");
+        console.log("me",urlSigned,urlSigned==="");
       })
       .catch((e) => {
         console.log(e);
@@ -92,7 +92,7 @@ function Payroll () {
                 </div>
             </div>
             <div className="row mb-1 row-alert">
-              <p className={urlSigned=="" && fileGetted ? "alert-visible text-danger" : ""}>No se encontro boleta del mes</p>
+              <p className={urlSigned==="" && fileGetted ? "alert-visible text-danger" : ""}>No se encontro boleta del mes</p>
             </div>
             <div className="row mb-3">
                 <p>Record de vacaciones</p>
